@@ -16,11 +16,15 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import Dashboard from "views/Dashboard.js";
-import Icons from "views/Icons.js";
-import Typography from "views/Typography.js";
-import TableList from "views/Tables.js";
-import UserPage from "views/User.js";
+
+import {
+  Dashboard,
+  Icons,
+  User,
+  ListCatHoodie,
+  TambahCatHoodie,
+  EditCatHoodie,
+} from "./views";
 
 var routes = [
   {
@@ -29,6 +33,29 @@ var routes = [
     icon: "nc-icon nc-bank",
     component: Dashboard,
     layout: "/admin",
+    sidebar: true,
+  },
+  {
+    path: "/category-hoodie",
+    name: "Master Category Hoodie",
+    icon: "nc-icon nc-world-2",
+    component: ListCatHoodie,
+    layout: "/admin",
+    sidebar: true,
+  },
+  {
+    path: "/category-hoodie/tambah",
+    name: "Tambah Category Hoodie",
+    component: TambahCatHoodie,
+    layout: "/admin",
+    sidebar: false,
+  },
+  {
+    path: "/category-hoodie/edit/:id",
+    name: "Edit Category Hoodie",
+    component: EditCatHoodie,
+    layout: "/admin",
+    sidebar: false,
   },
   {
     path: "/icons",
@@ -36,26 +63,13 @@ var routes = [
     icon: "nc-icon nc-diamond",
     component: Icons,
     layout: "/admin",
+    sidebar: true,
   },
   {
     path: "/user-page",
     name: "User Profile",
     icon: "nc-icon nc-single-02",
-    component: UserPage,
-    layout: "/admin",
-  },
-  {
-    path: "/tables",
-    name: "Table List",
-    icon: "nc-icon nc-tile-56",
-    component: TableList,
-    layout: "/admin",
-  },
-  {
-    path: "/typography",
-    name: "Typography",
-    icon: "nc-icon nc-caps-small",
-    component: Typography,
+    component: User,
     layout: "/admin",
   },
 ];
