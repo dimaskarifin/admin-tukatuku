@@ -24,6 +24,8 @@ import {
   ListCatHoodie,
   TambahCatHoodie,
   EditCatHoodie,
+  ListHoodie,
+  TambahHoodie,
 } from "./views";
 
 var routes = [
@@ -54,6 +56,21 @@ var routes = [
     path: "/category-hoodie/edit/:id",
     name: "Edit Category Hoodie",
     component: EditCatHoodie,
+    layout: "/admin",
+    sidebar: false,
+  },
+  {
+    path: "/hoodie",
+    name: "Master Hoodie",
+    icon: "nc-icon nc-cart-simple",
+    component: ListHoodie,
+    layout: "/admin",
+    sidebar: true,
+  },
+  {
+    path: "/hoodie/tambah",
+    name: "Tambah Hoodie",
+    component: TambahHoodie,
     layout: "/admin",
     sidebar: false,
   },

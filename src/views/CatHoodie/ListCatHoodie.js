@@ -16,7 +16,7 @@ import { deleteCatHoodie } from "actions/CatHoodieAction";
 import { getListCatHoodie } from "actions/CatHoodieAction";
 import swal from "sweetalert";
 
-class ListHoodie extends Component {
+class ListCatHoodie extends Component {
   componentDidMount() {
     this.props.dispatch(getListCatHoodie());
   }
@@ -148,4 +148,4 @@ const mapStateToProps = (state) => ({
   deleteCatHoodieError: state.CatHoodieReducer.deleteCatHoodieError,
 });
 
-export default connect(mapStateToProps, null)(ListHoodie);
+export default connect(mapStateToProps, null)(ListCatHoodie);
