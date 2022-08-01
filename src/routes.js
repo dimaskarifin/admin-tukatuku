@@ -26,6 +26,7 @@ import {
   EditCatHoodie,
   ListHoodie,
   TambahHoodie,
+  EditHoodie,
 } from "./views";
 
 var routes = [
@@ -71,6 +72,13 @@ var routes = [
     path: "/hoodie/tambah",
     name: "Tambah Hoodie",
     component: TambahHoodie,
+    layout: "/admin",
+    sidebar: false,
+  },
+  {
+    path: "/hoodie/edit/:id",
+    name: "Edit Hoodie",
+    component: EditHoodie,
     layout: "/admin",
     sidebar: false,
   },
