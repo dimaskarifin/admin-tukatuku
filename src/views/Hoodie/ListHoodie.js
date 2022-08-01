@@ -47,7 +47,7 @@ class ListHoodie extends Component {
           <Col md="12">
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Master Hoodie</CardTitle>
+                <CardTitle tag="h4">Master Product</CardTitle>
                 <Link
                   to="/admin/hoodie/tambah"
                   className="btn btn-primary float-right"

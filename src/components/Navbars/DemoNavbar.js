@@ -16,7 +16,9 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+import { logOutUser } from "actions/AuthAction";
 import React from "react";
+import { connect } from "react-redux";
 import { useLocation } from "react-router-dom";
 import {
   Collapse,
@@ -149,7 +151,12 @@ function Header(props) {
                 </p>
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem tag="a">Log Out</DropdownItem>
+                <DropdownItem
+                  tag="a"
+                  onClick={() => props.dispatch(logOutUser(props.history))}
+                >
+                  Log Out
+                </DropdownItem>
               </DropdownMenu>
             </Dropdown>
           </Nav>
@@ -159,4 +166,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default connect()(Header);

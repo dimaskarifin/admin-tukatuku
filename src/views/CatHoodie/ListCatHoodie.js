@@ -50,7 +50,7 @@ class ListCatHoodie extends Component {
           <Col md="12">
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Master Category Hoodie</CardTitle>
+                <CardTitle tag="h4">Master Category Product</CardTitle>
                 <Link
                   to="/admin/category-hoodie/tambah"
                   className="btn btn-primary float-right"

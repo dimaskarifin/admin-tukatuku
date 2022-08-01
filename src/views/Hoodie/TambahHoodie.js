@@ -172,7 +172,7 @@ class TambahHoodie extends Component {
         <Row>
           <Col>
             <Card>
-              <CardHeader tag="h4">Tambah Hoodie</CardHeader>
+              <CardHeader tag="h4">Tambah Product</CardHeader>
               <CardBody>
                 <form onSubmit={(event) => this.handleSubmit(event)}>
                   <Row>
@@ -276,7 +276,7 @@ class TambahHoodie extends Component {
                       <Row>
                         <Col md={6}>
                           <FormGroup>
-                            <label>Category Hoodie</label>
+                            <label>Category Product</label>
                             <Input
                               type="select"
                               name="cathoodies"

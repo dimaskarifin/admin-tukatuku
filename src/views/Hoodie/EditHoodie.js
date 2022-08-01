@@ -208,7 +208,7 @@ class EditHoodie extends Component {
         <Row>
           <Col>
             <Card>
-              <CardHeader tag="h4">Edit Hoodie</CardHeader>
+              <CardHeader tag="h4">Edit Product</CardHeader>
               <CardBody>
                 <form onSubmit={(event) => this.handleSubmit(event)}>
                   <Row>

@@ -24,6 +24,8 @@ import { Route, Switch, useLocation } from "react-router-dom";
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
+import { connect } from "react-redux";
+import { checkLogin } from "../actions/AuthAction";
 
 import routes from "routes.js";
 
@@ -35,6 +37,8 @@ function Dashboard(props) {
   const mainPanel = React.useRef();
   const location = useLocation();
   React.useEffect(() => {
+    props.dispatch(checkLogin(props.history));
+
     if (navigator.platform.indexOf("Win") > -1) {
       ps = new PerfectScrollbar(mainPanel.current);
       document.body.classList.toggle("perfect-scrollbar-on");
@@ -78,4 +82,4 @@ function Dashboard(props) {
   );
 }
 
-export default Dashboard;
+export default connect()(Dashboard);

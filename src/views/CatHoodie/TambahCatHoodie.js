@@ -1,5 +1,4 @@
 import { tambahCatHoodie } from "actions/CatHoodieAction";
-import { getListCatHoodie } from "actions/CatHoodieAction";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
@@ -14,7 +13,6 @@ import {
   Input,
   Row,
   Spinner,
-  Table,
 } from "reactstrap";
 import swal from "sweetalert";
 import DefaultImage from "../../assets/img/default-image.jpg";
@@ -89,7 +87,7 @@ class TambahCatHoodie extends Component {
           <Col md="12">
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Tambah Category Hoodie</CardTitle>
+                <CardTitle tag="h4">Tambah Category Product</CardTitle>
               </CardHeader>
               <CardBody>
                 <Row>

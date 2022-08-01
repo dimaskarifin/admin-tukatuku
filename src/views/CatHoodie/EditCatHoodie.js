@@ -12,7 +12,6 @@ import {
   Input,
   Row,
   Spinner,
-  Table,
 } from "reactstrap";
 import swal from "sweetalert";
 import DefaultImage from "../../assets/img/default-image.jpg";
@@ -100,7 +99,7 @@ class EditCatHoodie extends Component {
           <Col md="12">
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Edit Category Hoodie</CardTitle>
+                <CardTitle tag="h4">Edit Category Product</CardTitle>
               </CardHeader>
               <CardBody>
                 <Row>

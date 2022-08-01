@@ -28,6 +28,7 @@ import { Provider } from "react-redux";
 import store from "../src/reducers/store";
 
 import AdminLayout from "layouts/Admin.js";
+import { Login } from "./views";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -36,7 +37,8 @@ root.render(
     <BrowserRouter>
       <Switch>
         <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-        <Redirect to="/admin/dashboard" />
+        <Route path="/login" component={Login} exact />
+        <Redirect to="/login" />
       </Switch>
     </BrowserRouter>
   </Provider>

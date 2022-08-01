@@ -7,6 +7,7 @@ import EditCatHoodie from "./CatHoodie/EditCatHoodie";
 import ListHoodie from "./Hoodie/ListHoodie";
 import TambahHoodie from "./Hoodie/TambahHoodie";
 import EditHoodie from "./Hoodie/EditHoodie";
+import Login from "./Login";
 
 export {
   Dashboard,
@@ -18,4 +19,5 @@ export {
   ListHoodie,
   TambahHoodie,
   EditHoodie,
+  Login,
 };
