@@ -4,6 +4,7 @@ import {
   TAMBAH_HOODIE,
   GET_DETAIL_HOODIE,
   UPDATE_HOODIE,
+  DELETE_HOODIE,
 } from "../../actions/HoodieAction";
 
 const initialState = {
@@ -26,6 +27,10 @@ const initialState = {
   updateHoodieLoading: false,
   updateHoodieResult: false,
   updateHoodieError: false,
+
+  deleteHoodieLoading: false,
+  deleteHoodieResult: false,
+  deleteHoodieError: false,
 };
 
 export default function (state = initialState, action) {
@@ -64,6 +69,13 @@ export default function (state = initialState, action) {
         updateHoodieLoading: action.payload.loading,
         updateHoodieResult: action.payload.data,
         updateHoodieError: action.payload.errorMessage,
+      };
+    case DELETE_HOODIE:
+      return {
+        ...state,
+        deleteHoodieLoading: action.payload.loading,
+        deleteHoodieResult: action.payload.data,
+        deleteHoodieError: action.payload.errorMessage,
       };
     default:
       return state;

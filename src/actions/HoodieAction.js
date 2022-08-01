@@ -6,6 +6,7 @@ export const UPLOAD_HOODIE = "UPLOAD_HOODIE";
 export const TAMBAH_HOODIE = "TAMBAH_HOODIE";
 export const GET_DETAIL_HOODIE = "GET_DETAIL_HOODIE";
 export const UPDATE_HOODIE = "UPDATE_HOODIE";
+export const DELETE_HOODIE = "DELETE_HOODIE";
 
 export const getListHoodie = () => {
   return (dispatch) => {
@@ -151,6 +152,45 @@ export const updateHoodie = (data) => {
       .catch((error) => {
         dispatchError(dispatch, UPDATE_HOODIE, error);
         alert(error);
+      });
+  };
+};
+
+export const deleteHoodie = (images, id) => {
+  return (dispatch) => {
+    dispatchLoading(dispatch, DELETE_HOODIE);
+
+    //mengambil parameter image array[0] dan array[1] dari firebase storage dan menhapus sesuai id hoodies
+    var desertRef = FIREBASE.storage().refFromURL(images[0]);
+    desertRef
+      .delete()
+      .then(function () {
+        var desertRef2 = FIREBASE.storage().refFromURL(images[1]);
+
+        desertRef2
+          .delete()
+          .then(function () {
+            //hapus realtime database
+            FIREBASE.database()
+              .ref("hoodies/" + id)
+              .remove()
+              .then(function () {
+                dispatchSuccess(
+                  dispatch,
+                  DELETE_HOODIE,
+                  "Hoodie Berhasil di Hapus"
+                );
+              })
+              .catch(function (error) {
+                dispatchError(dispatch, DELETE_HOODIE, error);
+              });
+          })
+          .catch(function (error) {
+            dispatchError(dispatch, DELETE_HOODIE, error);
+          });
+      })
+      .catch(function (error) {
+        dispatchError(dispatch, DELETE_HOODIE, error);
       });
   };
 };

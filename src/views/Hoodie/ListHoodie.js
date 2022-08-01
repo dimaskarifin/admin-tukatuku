@@ -15,15 +15,28 @@ import {
 import swal from "sweetalert";
 import { getListHoodie } from "actions/HoodieAction";
 import { numberWithCommas } from "utils";
+import { deleteHoodie } from "actions/HoodieAction";
 
 class ListHoodie extends Component {
   componentDidMount() {
     this.props.dispatch(getListHoodie());
   }
 
-  removeData = (image, id) => {};
+  removeData = (image, key) => {
+    this.props.dispatch(deleteHoodie(image, key));
+  };
 
-  componentDidUpdate(prevProps) {}
+  componentDidUpdate(prevProps) {
+    const { deleteHoodieResult } = this.props;
+
+    if (
+      deleteHoodieResult &&
+      prevProps.deleteHoodieResult !== deleteHoodieResult
+    ) {
+      swal("Sukses!", deleteHoodieResult, "success");
+      this.props.dispatch(getListHoodie());
+    }
+  }
 
   render() {
     const { getListHoodieLoading, getListHoodieResult, getListHoodieError } =
@@ -88,7 +101,7 @@ class ListHoodie extends Component {
                               className="ml-2"
                               onClick={() =>
                                 this.removeData(
-                                  getListHoodieResult[key].image,
+                                  getListHoodieResult[key].gambar,
                                   key
                                 )
                               }
@@ -136,6 +149,10 @@ const mapStateToProps = (state) => ({
   getListHoodieLoading: state.HoodieReducer.getListHoodieLoading,
   getListHoodieResult: state.HoodieReducer.getListHoodieResult,
   getListHoodieError: state.HoodieReducer.getListHoodieError,
+
+  deleteHoodieLoading: state.HoodieReducer.deleteHoodieLoading,
+  deleteHoodieResult: state.HoodieReducer.deleteHoodieResult,
+  deleteHoodieError: state.HoodieReducer.deleteHoodieError,
 });
 
 export default connect(mapStateToProps, null)(ListHoodie);
