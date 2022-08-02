@@ -27,6 +27,7 @@ import {
   ListHoodie,
   TambahHoodie,
   EditHoodie,
+  ListPesanan,
 } from "./views";
 
 var routes = [
@@ -81,6 +82,14 @@ var routes = [
     component: EditHoodie,
     layout: "/admin",
     sidebar: false,
+  },
+  {
+    path: "/pesanan",
+    name: "Master Pesanan",
+    icon: "nc-icon nc-money-coins",
+    component: ListPesanan,
+    layout: "/admin",
+    sidebar: true,
   },
   {
     path: "/icons",

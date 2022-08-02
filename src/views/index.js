@@ -8,6 +8,7 @@ import ListHoodie from "./Hoodie/ListHoodie";
 import TambahHoodie from "./Hoodie/TambahHoodie";
 import EditHoodie from "./Hoodie/EditHoodie";
 import Login from "./Login";
+import ListPesanan from "./Pesanan/ListPesanan";
 
 export {
   Dashboard,
@@ -20,4 +21,5 @@ export {
   TambahHoodie,
   EditHoodie,
   Login,
+  ListPesanan,
 };
