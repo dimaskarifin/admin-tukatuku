@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import {
-  Button,
   Card,
   CardBody,
   CardHeader,
@@ -21,7 +20,6 @@ class ListAkun extends Component {
 
   render() {
     const { getListAkunLoading, getListAkunResult } = this.props;
-    console.log("Data:", getListAkunResult);
     return (
       <div className="content">
         <Row>
@@ -55,23 +53,10 @@ class ListAkun extends Component {
                           <td>
                             <Link
                               className="btn btn-warning"
-                              to={"/admin/hoodie/edit/" + key}
+                              to={"/admin/akun/edit/" + key}
                             >
                               <i className="nc-icon nc-ruler-pencil"></i> Edit
                             </Link>
-
-                            <Button
-                              color="danger"
-                              className="ml-2"
-                              onClick={() =>
-                                this.removeData(
-                                  getListAkunResult[key].gambar,
-                                  key
-                                )
-                              }
-                            >
-                              <i className="nc-icon nc-basket"></i> Hapus
-                            </Button>
                           </td>
                         </tr>
                       ))

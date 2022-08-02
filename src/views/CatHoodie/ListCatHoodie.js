@@ -53,7 +53,8 @@ class ListCatHoodie extends Component {
                 <CardTitle tag="h4">Master Category Product</CardTitle>
                 <Link
                   to="/admin/category-hoodie/tambah"
-                  className="btn btn-primary float-right"
+                  className="btn btn-primary"
+                  style={{ float: "right" }}
                 >
                   Tambah Category Product
                 </Link>
@@ -83,7 +84,7 @@ class ListCatHoodie extends Component {
                           <td>{getListCatHoodieResult[key].catHoodie}</td>
                           <td>
                             <Link
-                              className="btn btn-warning"
+                              className="btn btn-warning ml-4"
                               to={"/admin/category-hoodie/edit/" + key}
                             >
                               <i className="nc-icon nc-ruler-pencil"></i> Edit
@@ -91,7 +92,7 @@ class ListCatHoodie extends Component {
 
                             <Button
                               color="danger"
-                              className="ml-2"
+                              style={{ marginLeft: 4 }}
                               onClick={() =>
                                 this.removeData(
                                   getListCatHoodieResult[key].image,

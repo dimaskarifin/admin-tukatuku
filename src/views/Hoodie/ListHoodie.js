@@ -50,7 +50,8 @@ class ListHoodie extends Component {
                 <CardTitle tag="h4">Master Product</CardTitle>
                 <Link
                   to="/admin/hoodie/tambah"
-                  className="btn btn-primary float-right"
+                  className="btn btn-primary"
+                  style={{ float: "right" }}
                 >
                   Tambah Product
                 </Link>
@@ -98,7 +99,7 @@ class ListHoodie extends Component {
 
                             <Button
                               color="danger"
-                              className="ml-2"
+                              style={{ marginLeft: 4 }}
                               onClick={() =>
                                 this.removeData(
                                   getListHoodieResult[key].gambar,
