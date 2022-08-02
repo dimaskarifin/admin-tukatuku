@@ -159,7 +159,7 @@ class EditHoodie extends Component {
       ukuranSelected &&
       cathoodies
     ) {
-      //actions tambah Hoodie
+      //actions update Hoodie
       this.props.dispatch(updateHoodie(this.state));
     } else {
       swal("Failed", "Maaf semua form wajib diisi", "error");
@@ -218,10 +218,10 @@ class EditHoodie extends Component {
                           <img
                             src={image1}
                             width="300"
-                            alt="Foto Hoodie Depan"
+                            alt="Foto Product Depan"
                           />
                           <FormGroup>
-                            <label>Foto Hoodie Depan</label>
+                            <label>Foto Product Depan</label>
                             <Input
                               type="file"
                               name="image1"
@@ -255,10 +255,10 @@ class EditHoodie extends Component {
                           <img
                             src={image2}
                             width="300"
-                            alt="Foto Hoodie Detail"
+                            alt="Foto Product Detail"
                           />
                           <FormGroup>
-                            <label>Foto Hoodie Detail</label>
+                            <label>Foto Product Detail</label>
                             <Input
                               type="file"
                               name="image2"
@@ -292,7 +292,7 @@ class EditHoodie extends Component {
                     </Col>
                     <Col md={6}>
                       <FormGroup>
-                        <label>Nama Hoodie</label>
+                        <label>Nama Product</label>
                         <Input
                           type="text"
                           value={nama}
@@ -312,7 +312,7 @@ class EditHoodie extends Component {
                       <Row>
                         <Col md={6}>
                           <FormGroup>
-                            <label>Category Hoodie</label>
+                            <label>Category Product</label>
                             <Input
                               type="select"
                               name="cathoodies"

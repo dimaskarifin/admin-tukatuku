@@ -53,7 +53,7 @@ class EditCatHoodie extends Component {
       //proses ke actions untuk tambah data ke firebase
       this.props.dispatch(updateCatHoodie(this.state));
     } else {
-      swal("Failed!", "Maaf Nama Category Hoodie harus diisi", "error");
+      swal("Failed!", "Maaf Nama Category Product harus diisi", "error");
     }
   };
 
@@ -68,7 +68,7 @@ class EditCatHoodie extends Component {
       updateCatHoodieResult &&
       prevProps.updateCatHoodieResult !== updateCatHoodieResult
     ) {
-      swal("Sukses", "Berhasil Update Category Hoodie", "success");
+      swal("Sukses", "Berhasil Update Category Product", "success");
       this.props.history.push("/admin/category-hoodie");
     }
     if (
@@ -104,14 +104,14 @@ class EditCatHoodie extends Component {
               <CardBody>
                 <Row>
                   <Col>
-                    <img src={image} width="200" alt="Logo Category Hoodie" />
+                    <img src={image} width="200" alt="Logo Category Product" />
                   </Col>
                 </Row>
                 <form onSubmit={(event) => this.handleSubmit(event)}>
                   <Row>
                     <Col md={6}>
                       <FormGroup>
-                        <label>Logo Category Hoodie</label>
+                        <label>Logo Category Product</label>
                         <Input
                           type="file"
                           onChange={(event) => this.handleImage(event)}
@@ -120,7 +120,7 @@ class EditCatHoodie extends Component {
                     </Col>
                     <Col md={6}>
                       <FormGroup>
-                        <label>Nama Category Hoodie</label>
+                        <label>Nama Category Product</label>
                         <Input
                           type="text"
                           value={catHoodie}

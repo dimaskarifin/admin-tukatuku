@@ -55,7 +55,7 @@ class ListCatHoodie extends Component {
                   to="/admin/category-hoodie/tambah"
                   className="btn btn-primary float-right"
                 >
-                  Tambah Category Hoodie
+                  Tambah Category Product
                 </Link>
               </CardHeader>
               <CardBody>
@@ -63,7 +63,7 @@ class ListCatHoodie extends Component {
                   <thead className="text-primary">
                     <tr>
                       <th>Logo</th>
-                      <th>Nama Category Hoodie</th>
+                      <th>Nama Category Product</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>

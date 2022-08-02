@@ -53,7 +53,7 @@ class TambahCatHoodie extends Component {
     } else {
       swal(
         "Failed!",
-        "Maaf Nama Category Hoodie dan Logo Category Hoodie harus diisi",
+        "Maaf Nama Category Hoodie dan Logo Category Product harus diisi",
         "error"
       );
     }
@@ -92,14 +92,14 @@ class TambahCatHoodie extends Component {
               <CardBody>
                 <Row>
                   <Col>
-                    <img src={image} width="200" alt="Logo Category Hoodie" />
+                    <img src={image} width="200" alt="Logo Category Product" />
                   </Col>
                 </Row>
                 <form onSubmit={(event) => this.handleSubmit(event)}>
                   <Row>
                     <Col md={6}>
                       <FormGroup>
-                        <label>Logo Category Hoodie</label>
+                        <label>Logo Category Product</label>
                         <Input
                           type="file"
                           onChange={(event) => this.handleImage(event)}
@@ -108,7 +108,7 @@ class TambahCatHoodie extends Component {
                     </Col>
                     <Col md={6}>
                       <FormGroup>
-                        <label>Nama Category Hoodie</label>
+                        <label>Nama Category Product</label>
                         <Input
                           type="text"
                           value={catHoodie}

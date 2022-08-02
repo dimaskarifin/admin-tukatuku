@@ -60,7 +60,7 @@ class TambahHoodie extends Component {
       tambahHoodieResult &&
       prevProps.tambahHoodieResult !== tambahHoodieResult
     ) {
-      swal("Sukses", "Tambah Hoodie Sukses Dibuat", "success");
+      swal("Sukses", "Tambah Product Sukses Dibuat", "success");
       this.props.history.push("/admin/hoodie");
     }
   }
@@ -182,10 +182,10 @@ class TambahHoodie extends Component {
                           <img
                             src={image1}
                             width="300"
-                            alt="Foto Hoodie Depan"
+                            alt="Foto Product Depan"
                           />
                           <FormGroup>
-                            <label>Foto Hoodie Depan</label>
+                            <label>Foto Product Depan</label>
                             <Input
                               type="file"
                               name="image1"
@@ -219,10 +219,10 @@ class TambahHoodie extends Component {
                           <img
                             src={image2}
                             width="300"
-                            alt="Foto Hoodie Detail"
+                            alt="Foto Product Detail"
                           />
                           <FormGroup>
-                            <label>Foto Hoodie Detail</label>
+                            <label>Foto Product Detail</label>
                             <Input
                               type="file"
                               name="image2"
@@ -256,7 +256,7 @@ class TambahHoodie extends Component {
                     </Col>
                     <Col md={6}>
                       <FormGroup>
-                        <label>Nama Hoodie</label>
+                        <label>Nama Product</label>
                         <Input
                           type="text"
                           value={nama}
