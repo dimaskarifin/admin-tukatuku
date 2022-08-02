@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import {
-  Button,
   Card,
   CardBody,
   CardHeader,
@@ -87,7 +85,6 @@ class ListPesanan extends Component {
                             <a
                               href={getListPesananResult[key].url}
                               className="btn btn-primary"
-                              target="_blank"
                             >
                               <i className="nc-icon nc-money-coins"></i>{" "}
                               Midtrans

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import {
   GET_LIST_CATHOODIE,
   GET_DETAIL_CATHOODIE,

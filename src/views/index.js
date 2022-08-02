@@ -9,6 +9,9 @@ import TambahHoodie from "./Hoodie/TambahHoodie";
 import EditHoodie from "./Hoodie/EditHoodie";
 import Login from "./Login";
 import ListPesanan from "./Pesanan/ListPesanan";
+import Finish from "./Midtrans/Finish";
+import Unfinish from "./Midtrans/Unfinish";
+import Gagal from "./Midtrans/Gagal";
 
 export {
   Dashboard,
@@ -22,4 +25,7 @@ export {
   EditHoodie,
   Login,
   ListPesanan,
+  Finish,
+  Unfinish,
+  Gagal,
 };

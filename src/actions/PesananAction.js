@@ -22,3 +22,28 @@ export const getListPesanan = () => {
       });
   };
 };
+
+export const updatePesanan = (order_id, transaction_status) => {
+  return (dispatch) => {
+    dispatchLoading(dispatch, UPDATE_PESANAN);
+
+    const status =
+      transaction_status === "settlement" || transaction_status === "capture"
+        ? "Lunas"
+        : transaction_status;
+
+    FIREBASE.database()
+      .ref("histories")
+      .child(order_id)
+      .update({
+        status: status,
+      })
+      .then((response) => {
+        dispatchSuccess(dispatch, UPDATE_PESANAN, response ? response : []);
+      })
+      .catch((error) => {
+        dispatchError(dispatch, UPDATE_PESANAN, error);
+        alert(error);
+      });
+  };
+};
