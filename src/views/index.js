@@ -1,6 +1,4 @@
 import Dashboard from "./Dashboard";
-import Icons from "./Icons";
-import User from "./User";
 import ListCatHoodie from "./CatHoodie/ListCatHoodie";
 import TambahCatHoodie from "./CatHoodie/TambahCatHoodie";
 import EditCatHoodie from "./CatHoodie/EditCatHoodie";
@@ -12,11 +10,10 @@ import ListPesanan from "./Pesanan/ListPesanan";
 import Finish from "./Midtrans/Finish";
 import Unfinish from "./Midtrans/Unfinish";
 import Gagal from "./Midtrans/Gagal";
+import ListAkun from "./Akun/ListAkun";
 
 export {
   Dashboard,
-  Icons,
-  User,
   ListCatHoodie,
   TambahCatHoodie,
   EditCatHoodie,
@@ -28,4 +25,5 @@ export {
   Finish,
   Unfinish,
   Gagal,
+  ListAkun,
 };

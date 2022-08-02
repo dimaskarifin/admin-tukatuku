@@ -19,8 +19,6 @@
 
 import {
   Dashboard,
-  Icons,
-  User,
   ListCatHoodie,
   TambahCatHoodie,
   EditCatHoodie,
@@ -28,6 +26,7 @@ import {
   TambahHoodie,
   EditHoodie,
   ListPesanan,
+  ListAkun,
 } from "./views";
 
 var routes = [
@@ -92,19 +91,12 @@ var routes = [
     sidebar: true,
   },
   {
-    path: "/icons",
-    name: "Icons",
-    icon: "nc-icon nc-diamond",
-    component: Icons,
+    path: "/user",
+    name: "User",
+    icon: "nc-icon nc-badge",
+    component: ListAkun,
     layout: "/admin",
     sidebar: true,
-  },
-  {
-    path: "/user-page",
-    name: "User Profile",
-    icon: "nc-icon nc-single-02",
-    component: User,
-    layout: "/admin",
   },
 ];
 export default routes;
