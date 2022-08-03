@@ -37,7 +37,6 @@ class ListAkun extends Component {
                       <th>Alamat</th>
                       <th>Email</th>
                       <th>Status</th>
-                      <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -50,14 +49,7 @@ class ListAkun extends Component {
                           <td>{getListAkunResult[key].alamat}</td>
                           <td>{getListAkunResult[key].email}</td>
                           <td>{getListAkunResult[key].status}</td>
-                          <td>
-                            <Link
-                              className="btn btn-warning"
-                              to={"/admin/akun/edit/" + key}
-                            >
-                              <i className="nc-icon nc-ruler-pencil"></i> Edit
-                            </Link>
-                          </td>
+                          <td></td>
                         </tr>
                       ))
                     ) : //Data Ada
